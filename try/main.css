@@ -1,0 +1,23 @@
+.upload_zone {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: aqua;
+}
+
+/* 參考資料 : https://www.oxxostudio.tw/articles/201412/css-boxsizing-backgroundclip.html */
+.upload_zone_enter {
+    border: 10px dashed black;
+    background-clip: content-box;
+}
+
+.obj {
+    width: 200px;
+    height: 200px;
+}
+
+.display_none {
+    display: none;
+}

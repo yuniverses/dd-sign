@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="auther" content="yuniverses(guan-yu)">
+    <meta name="robot" content="index,follow">
+    <base target="_self"/>
+    <!--set-->
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="">
+    <link rel="bookmark" href="">
+    <title>Document</title>
+    <!--set-->
+    <style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      
+      a {
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+    <h1>練習 : 製作上傳圖片的區塊</h1>
+<input type="file" id="fileUploader" class="display_none" onchange="handleFiles(this.files)"/>
+<div id="upload_zone" class="upload_zone">
+    請將要上傳的圖片拖曳至此
+</div>
+<div id="preview"></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./pdfupload.js"></script>
+</html>

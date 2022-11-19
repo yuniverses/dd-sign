@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<!-- 主頁開始 -->
+<div class="index">
+    <!-- 主頁工具列開始 -->
+    <div class="nav">
+        <a href="#"><img src="/img/logo.png"></a>
+        <ul><li><img src="/img/qamark.png"></li></ul>
+    </div>
+    <!-- 主頁工具列結束 -->
+    <!-- 主頁主要內容開始 -->
+    <div class="mainbox">
+        <div class="introbox">
+            <h1>全新、快速<br> 
+                線上簽名體驗</h1>
+            <p>線上最安全的電子簽名服務- 免費且易於使用。
+                <br> 快速將PDF文件簽署。</p>
+            <img src="/img/img1.png">
+        </div>
+        <div class="mainfunc">
+            <div id="background-y"></div>
+            <!-- <label>
+                <input type="file" class="filein">
+                <div class="filelabel">
+                    <img src="/img/upload.png">
+                    <p>上傳文件以開始簽署<br>拖曳檔案或點擊此處上傳</p>
+                    <img src="/img/picture_as_pdf.png">
+                </div>
+            </label> -->
+            <label>
+                <input type="file" id="fileUploader" class="fileUploader" onchange="handleFiles(this.files)"/>
+                <div id="upload_zone" class="upload_zone">
+                    <img src="/img/upload.png">
+                    <p>上傳文件以開始簽署<br>拖曳檔案或點擊此處上傳</p>
+                    <img src="/img/picture_as_pdf.png">
+                </div>
+            </label>
+            <input type="text" class="codein" placeholder="或 輸入代碼進行簽署">
+            <p>開始使用即同意我們的<a class="link" href="#">使用條款</a></p>
+        </div>
+    </div>
+    <div id="preview"></div>
+    <!-- 主頁主要內容結束 -->
+    <!-- 使用資訊 -->
+    <div class="mainintro">
+        <div class="mainintro1">
+            <img src="/img/img2.png">
+            <h3>自己上傳檔案，<br>自己簽</h3>
+            <p>線上最安全的電子簽名服務<br>- 免費且易於使用。
+                <br>快速將PDF文件簽署。</p>
+        </div>
+        <div class="mainintro2">
+            <img src="/img/img3.png">
+            <h3>製作好簽名區域後，<br>分享給別人簽</h3>
+            <p>線上最安全的電子簽名服務<br>- 免費且易於使用。
+                <br>快速將PDF文件簽署。</p>
+        </div>
+    </div>
+    <!-- 使用資訊結束 -->
+</div>
+<!-- 主頁結束 -->
+
+<!-- 檔案使用預覽開始 -->
+<div class="file">
+    <div class="filepreview">
+        <label>
+        </label>
+    </div>
+    <div class="filecontrol">
+        <div class="filepreview2">
+            <img src="">
+        </div>
+        <div class="selectintro">
+            <h3>選擇用途</h3>
+            <img src="點簽/img/qamark.png">
+        </div>
+        <div class="select">
+            <img src="/img/funct1.png">
+            <img src="/img/funct2.png">
+        </div>
+        <img src="/img/start.png">
+        <label>
+            <input type="file"><p>重新上傳文件</p>
+        </label>
+    </div>
+</div>
+<!-- 檔案使用預覽結束 -->
+</body>
+<script src="./js/fileinput.js"></script>
+</html>

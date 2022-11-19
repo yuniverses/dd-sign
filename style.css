@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-style: none;
+    
+}
+
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #3f3f3f;
+    backdrop-filter: blur(5px);
+    /* background-image: url("/img/Y.png"); */
+    background-position: 85%;
+    background-repeat: no-repeat;
+}
+
+/* index start*/
+.link{
+    color: #FF9F46;
+    text-decoration: underline;
+}
+
+.index{
+    margin: auto;
+    width: 65%;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 14vh 0 3vh 0;
+}
+
+/* mainbox start*/
+
+.mainbox{
+    height: 32em;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20vh;
+}
+
+/* introbox start*/
+
+.introbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.introbox img{
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* introbox done*/
+
+/* mainfunc start*/
+
+.mainfunc{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+    margin: 0 5vh;
+    height: 95%;
+    justify-content: space-between;
+    background: rgba(255, 223, 112, 0.2);
+    box-shadow:0px 0px 100px 100px rgba(255, 223, 112, 0.2);
+}
+
+.mainfunc_enter {
+    border: 10px dashed black;
+    background-clip: content-box;
+}
+
+#background-y{
+    position: absolute;
+    z-index: -999;
+    top: -100pt;                       
+    left: 0;        
+    right: 0;
+    margin: auto; 
+    background: #FFDF70;
+    mix-blend-mode: hard-light;
+    filter: blur(104.5px);
+    border-radius: 341px; 
+}
+
+.fileUploader{
+    display: none;
+}
+
+.upload_zone{
+    background-color: #e3e3e33d;
+    border-radius: 14px;
+    height: 32vh;
+    opacity: 80%;
+    cursor: pointer;
+    border-color:#6A6A6A;
+    border: 6px dashed rgba(0, 0, 0, 0.2);
+    border-style: dashed;
+    margin: auto;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    mix-blend-mode: hard-light;
+}
+.upload_zone_enter {
+    background-color: #ffffff3d;
+    border-radius: 14px;
+    height: 32vh;
+    opacity: 80%;
+    cursor: pointer;
+    border: 15px dashed ;
+    border-style: dashed;
+    margin: auto;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    mix-blend-mode: hard-light;
+    border-image: linear-gradient(45deg, rgb(251, 237, 108), rgb(255, 165, 20)) 1;
+    /* 炫炮編筐 */
+    clip-path: inset(0px round 10px);
+    animation: huerotate 6s infinite linear;
+    filter: hue-rotate(360deg);
+  }
+  @keyframes huerotate {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rorate(360deg);
+    }
+  }
+
+.upload_zone p{
+    padding: 1em 0;
+}
+
+.codein{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 18px;
+    border-style: solid;
+    border-color:#6a6a6a7e;
+    background: rgba(255, 255, 255, 0.178);
+}
+
+/* mainfunc done*/
+/* mainbox done*/
+
+
+/* mainintro start */
+
+.mainintro{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 96%;
+    height: 40em;
+    margin: auto 0;
+    background-color: #E3E3E3;
+    border-radius: 16px;
+}
+
+.mainintro1{
+    padding-right: 5vh;
+}
+
+.mainintro2{
+    padding-left: 5vh;
+}
+
+.mainintro h3{
+    margin: 2vh 0 2vh 4vh;
+}
+
+.mainintro p{
+    margin-left: 4vh;
+    font-size: 10pt;
+}
+
+
+
+/* mainintro done */
+
+
+
+
+/* index done */
+
+
+
+/* filepreview start */
+
+.file{
+    margin: 14vh auto 10vh auto;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filepreview{
+    width: 35em;
+    background-color: #3f3f3f;
+}
+
+.filepreview2{
+    width: 35%;
+    height: 30%;
+    border-radius: 12px;
+    background-color: #3f3f3f;
+    margin-top: 6vh;
+}
+
+.filecontrol{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    background-color: #E3E3E3;
+    border-radius: 14px;
+    height: 45em;
+    width: 40%;
+}
+
+.selectintro{
+    display: flex;
+}
+
+.select img{
+    margin: -2vh 0.5em 2vh 0.5em;
+}
+
+.filecontrol input{
+    display: none;
+}
+
+.filecontrol label{
+    margin-bottom: 6vh;
+}
+
+/* filepreview done */
