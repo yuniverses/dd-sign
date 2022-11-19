@@ -30,6 +30,7 @@
         </div>
         <div class="mainfunc">
             <div id="background-y"></div>
+            
             <!-- <label>
                 <input type="file" class="filein">
                 <div class="filelabel">
@@ -38,14 +39,18 @@
                     <img src="/img/picture_as_pdf.png">
                 </div>
             </label> -->
-            <label>
-                <input type="file" id="fileUploader" class="fileUploader" onchange="handleFiles(this.files)"/>
+            
+            <div>
+                <input type="file" id="fileUploader" class="fileUploader" accept="pdf" name="file"/>
                 <div id="upload_zone" class="upload_zone">
+                        
                     <img src="/img/upload.png">
                     <p>上傳文件以開始簽署<br>拖曳檔案或點擊此處上傳</p>
                     <img src="/img/picture_as_pdf.png">
                 </div>
-            </label>
+            </div>
+            
+                
             <input type="text" class="codein" placeholder="或 輸入代碼進行簽署">
             <p>開始使用即同意我們的<a class="link" href="#">使用條款</a></p>
         </div>
@@ -73,10 +78,9 @@
 
 <!-- 檔案使用預覽開始 -->
 <div class="file">
-    <div class="filepreview">
-        <label>
-        </label>
-    </div>
+
+    <canvas id="canvas" style="border: 1px solid #000"></canvas>
+
     <div class="filecontrol">
         <div class="filepreview2">
             <img src="">
@@ -98,4 +102,9 @@
 <!-- 檔案使用預覽結束 -->
 </body>
 <script src="./js/fileinput.js"></script>
+<script src="./app.js"></script>
+<script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
+<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<script src="./js/pdf.js"></script>
+<script src="./js/dropzone.js"></script>
 </html>
