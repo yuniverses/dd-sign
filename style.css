@@ -246,6 +246,11 @@ a{
 }
 .canvas-container{
     margin-right: 10pt;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    right: 0;
 }
 
 .filepreview{
@@ -384,4 +389,9 @@ a{
     border-radius: 8pt;
     color: white;
     margin-bottom: 10pt;
+}
+#pdf-preview-dialog{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 5pt;
 }

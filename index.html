@@ -49,7 +49,7 @@
                         
                     <img src="/img/upload.png">
                     <p>上傳文件以開始簽署<br>拖曳檔案或點擊此處上傳</p>
-                    <p>上傳進度： {{progress}}</p>
+                    <p>檔案支援：PDF</p>
                     <img src="/img/picture_as_pdf.png">
                 </div>
             </div>
@@ -161,8 +161,12 @@
         </ul>
     </div>
     <div class="main">
+        <dialog id="pdf-preview-dialog" style="z-index:999 ;">
+            <canvas id="pdf-preview" style="border: 0px solid #000"></canvas>
+        </dialog>
       <div class="pdf-preview-box">
-        <button id="pdf-show-btn"><span class="material-symbols-outlined">arrow_circle_right</span>查看文件</button>
+        <button id="pdf-show-btn"><span class="material-symbols-outlined">arrow_circle_right</span>預覽文件</button>
+        <button style="display: none;" id="pdf-close-btn"><span class="material-symbols-outlined" style="display: block;">cancel</span></button>
         <div class="pdf-preview" ><canvas id="pdf-preview" style="border: 0px solid #000"></canvas></div>
       </div>
     
@@ -203,7 +207,7 @@
 <!-- 簽名編輯開始 -->
 <div class="put" id="put-sign">
 
-  <div class="nav closeend put">
+  <div class="nav closㄡeend put">
       <a class="logo" href="#"><img src="/img/logo.png"></a>
       <ul class="progress-bar">
         <li class="finished">
@@ -255,7 +259,7 @@
 </div>
 
   <div class="main Complet">
-      <canvas class="put" id="pdf-edit" style="border-radius: 10pt;  "></canvas>
+      <canvas class="put" id="pdf-edit" style="border-radius: 10pt; "></canvas>
 
       <div class="filecontrol-Complet closeshow">
         <div class="selectintro">
@@ -336,7 +340,7 @@
       </div>
       <div class="button">
         <button class="download" id="download" href="#"><span class="material-symbols-outlined">picture_as_pdf</span>下載為PDF</button>
-        <a href="#">回首頁</a>
+        <a href="#" onclick="reload">回首頁</a>
       </div>
     </div>
   </div>

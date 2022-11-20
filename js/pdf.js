@@ -129,6 +129,22 @@ document.querySelector("input").addEventListener("change", async (e) => {
   canvasp3.setBackgroundImage(pdfImage, canvasp3.renderAll.bind(canvasp3));
 });
 
+// 浮動的預覽3
+const canvasp4 = new fabric.Canvas("pdf-edit");
+
+document.querySelector("input").addEventListener("change", async (e) => {
+  canvasp4.requestRenderAll();
+  const pdfData = await printPDF(e.target.files[0]);
+  const pdfImage = await pdfToImage(pdfData);
+
+  // 透過比例設定 canvas 尺寸
+  canvasp4.setWidth(pdfImage.width / window.devicePixelRatio);
+  canvasp4.setHeight(pdfImage.height / window.devicePixelRatio);
+
+  // 將 PDF 畫面設定為背景
+  canvasp4.setBackgroundImage(pdfImage, canvasp4.renderAll.bind(canvasp4));
+});
+
 
 
 // 下載PDF
