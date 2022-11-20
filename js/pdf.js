@@ -85,6 +85,26 @@ document.querySelector("input").addEventListener("change", async (e) => {
   canvasp.setBackgroundImage(pdfImage, canvasp.renderAll.bind(canvasp));
 });
 
+
+// 加入簽名
+const sign = document.querySelector(".sign");
+if (localStorage.getItem("img")) {
+  sign.src = localStorage.getItem("img");
+}
+
+sign.addEventListener("click", () => {
+  if (!sign.src) return;
+  fabric.Image.fromURL(sign.src, function (image) {
+    image.top = 400;
+    image.scaleX = 0.5;
+    image.scaleY = 0.5;
+    canvas.add(image);
+  });
+});
+
+
+
+
 // 簽名頁的預覽１
 const canvasp2 = new fabric.Canvas("pdf-preview");
 
@@ -99,4 +119,20 @@ document.querySelector("input").addEventListener("change", async (e) => {
 
   // 將 PDF 畫面設定為背景
   canvasp2.setBackgroundImage(pdfImage, canvasp2.renderAll.bind(canvasp2));
+});
+
+// 簽名頁的預覽2
+const canvasp3 = new fabric.Canvas("pdf-edit");
+
+document.querySelector("input").addEventListener("change", async (e) => {
+  canvasp3.requestRenderAll();
+  const pdfData = await printPDF(e.target.files[0]);
+  const pdfImage = await pdfToImage(pdfData);
+
+  // 透過比例設定 canvas 尺寸
+  canvasp3.setWidth(pdfImage.width / window.devicePixelRatio);
+  canvasp3.setHeight(pdfImage.height / window.devicePixelRatio);
+
+  // 將 PDF 畫面設定為背景
+  canvasp3.setBackgroundImage(pdfImage, canvasp3.renderAll.bind(canvasp3));
 });

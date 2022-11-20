@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="./func-putsign.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+    <link href="../css/funcstyle.css" rel="stylesheet">
+    <link href="../css/func-putsign.css" rel="stylesheet">
 </head>
 <body>
 
@@ -24,7 +26,7 @@
         <div></div>
         <p>簽署</p>
       </li>
-      <li class="">
+      <li class="finished">
         <div></div>
         <p>放置簽名</p>
       </li>
@@ -39,25 +41,32 @@
     </ul>
 </div>
 <div class="main">
-    <img src="./img/Group 8982.png" onmousewheel="return zoomImg(this)" class="popup-header elementDist" alt="">
-    <div class="popup">
-        <div class="popup-header">点击移动</div>
-        <p>Move</p>
-        <p>this</p>
-        <p>DIV</p>
-    </div>
-    <div class="popup">
-        <div class="popup-header noselect">点击移动</div>
-        <p>Move</p>
-        <p>this</p>
-        <p>DIV</p>
-    </div>
+    <!------------------修改此canvas的css---------->
+    <canvas id="canvas-preview" style="border-radius: 10pt;  "></canvas>
+
+    <p>選擇簽名</p>
+    <img class="sign" style="border: 1px solid #000" width="250" height="150" />
+
+    <button class="download">download PDF</button>
+
+    <div class="step-operation-bar"
+                    style="gap: 10px">
+                    <img class="show-img" src="image/png" alt="">
+                    <button class="" id="clear-signature">清除</button>
+                    <button class="" id="save-signature">下一步<span class="material-symbols-outlined">
+                      arrow_circle_right
+                      </span></button>
+  </div>
 </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./js/canvas.js"></script>
-<script src="./js/pdf-preview.js"></script>
-<script src="./js/pdf-viewer.js"></script>
+<script src="../js/canvas.js"></script>
+<script src="../js/pdf-preview.js"></script>
+<script src="../js/pdf-viewer.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/fileinput.js"></script>
+<script src="../js/pdf.js"></script>
+<script src="../js/putsign.js"></script>
 </html>
