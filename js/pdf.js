@@ -130,6 +130,7 @@ document.querySelector("input").addEventListener("change", async (e) => {
 });
 
 
+
 // 下載PDF
 const pdff = new jsPDF();
 const download = document.querySelector("#download");
@@ -138,5 +139,5 @@ download.addEventListener("click", () => {
   const width = pdff.internal.pageSize.width;
   const height = pdff.internal.pageSize.height;
   pdff.addImage(image, "png", 0, 0, width, height);
-  pdff.save("download.pdf");
+  pdff.save($(" #file-rename ").val()+".pdf");
 });
