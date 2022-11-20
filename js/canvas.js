@@ -46,13 +46,13 @@ function finishedPosition() {
 
 // 繪圖過程
 function draw(e) {
-  e.preventDefault();
+  // 滑鼠移動過程中，若非繪圖狀態，則跳出
   if (!isPainting) return;
 
-  // 取得滑鼠 / 手指位置
+  // 取得滑鼠 / 手指在畫布上的 x, y 軸位置位置
   const paintPosition = getPaintPosition(e);
 
-  // 移動到滑鼠位置並產生圖案
+  // 移動滑鼠位置並產生圖案
   ctx.lineTo(paintPosition.x, paintPosition.y);
   ctx.stroke();
 }
@@ -84,3 +84,4 @@ canvas.addEventListener("touchmove", draw);
 // 重設按鈕
 clearBtn.addEventListener("click", reset);
 saveBtn.addEventListener("click", saveImage);
+

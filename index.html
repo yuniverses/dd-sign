@@ -134,72 +134,70 @@
 
 <!-- 簽名畫布開始 -->
 <div id="func-sign">
-  <div class="nav">
-      <a class="logo" href="#"><img src="/img/logo.png"></a>
-      <ul class="progress-bar">
-        <li class="finished">
-          <div></div>
-          <p>確認文件</p>
-        </li>
-        <li class="finished">
-          <div></div>
-          <p>簽署</p>
-        </li>
-        <li class="">
-          <div></div>
-          <p>放置簽名</p>
-        </li>
-        <li class="">
-          <div></div>
-          <p>輸出/寄送</p>
-        </li>
-      </ul>
-      <ul>
-        <li><img src="/img/qamark.png"></li>
-        <li><button>退出</button></li>
-      </ul>
-  </div>
-  <div class="main">
-    <div class="pdf-preview-box">
-      <button id="pdf-show-btn"><span class="material-symbols-outlined">arrow_circle_right</span>查看文件</button>
-      <div class="pdf-preview" ><canvas id="pdf-preview" style="border: 0px solid #000"></canvas></div>
+    <div class="nav">
+        <a class="logo" href="#"><img src="/img/logo.png"></a>
+        <ul class="progress-bar">
+          <li class="finished">
+            <div></div>
+            <p>確認文件</p>
+          </li>
+          <li class="finished">
+            <div></div>
+            <p>簽署</p>
+          </li>
+          <li class="">
+            <div></div>
+            <p>放置簽名</p>
+          </li>
+          <li class="">
+            <div></div>
+            <p>輸出/寄送</p>
+          </li>
+        </ul>
+        <ul>
+          <li><img src="/img/qamark.png"></li>
+          <li><button>退出</button></li>
+        </ul>
     </div>
-  
-          <!-- Manage Sign -->
-          <div class="tab-pane" id="manage-signature-content" aria-labelledby="manage-signature">
-              <div class="row m-0">
-                <div id="background-y"></div>
-                <div class="sign-area">
-                  <canvas id="canvas-signature"></canvas>
-                </div>
-              </div>
-            </div>
-          <div class="tool-bar">
-            <div class="uploadsign"><button>上傳簽名</button></div>
-            <div class="tool">
-              <div class="pen">
-                <div class="selected"><span class="material-symbols-outlined">draw</span></div>
-                <div><span class="material-symbols-outlined">deblur</span></div>
-              </div>
-              <div class="steps">
-                <span class="material-symbols-outlined">reply</span>
-                <span class="material-symbols-outlined">forward</span>
-              </div>
-  
-            </div>
-          </div>
-            <div class="step-operation-bar"
-                  style="gap: 10px">
-                  <img class="show-img" src="" alt="">
-                  <button class="" id="clear-signature">清除</button>
-                  <button class="" id="save-signature">新增<span class="material-symbols-outlined">
-                    arrow_circle_right
-                    </span></button>
-                </div>
+    <div class="main">
+      <div class="pdf-preview-box">
+        <button id="pdf-show-btn"><span class="material-symbols-outlined">arrow_circle_right</span>查看文件</button>
+        <div class="pdf-preview" ><canvas id="pdf-preview" style="border: 0px solid #000"></canvas></div>
       </div>
-  </div>
+    
+            <!-- Manage Sign -->
+            <div class="tab-pane" id="manage-signature-content" aria-labelledby="manage-signature">
+                <div class="row m-0">
+                  <div id="background-y"></div>
+                  <div class="sign-area">
+                    <canvas id="canvas-signature"></canvas>
+                  </div>
+                </div>
+              </div>
+            <div class="tool-bar">
+              <div class="uploadsign"><button>上傳簽名</button></div>
+              <div class="tool">
+                <div class="pen">
+                  <div class="selected"><span class="material-symbols-outlined">draw</span></div>
+                  <div><span class="material-symbols-outlined">deblur</span></div>
+                </div>
+                <div class="steps">
+                  <span class="material-symbols-outlined">reply</span>
+                  <span class="material-symbols-outlined">forward</span>
+                </div>
+    
+              </div>
+            </div>
+              <div class="step-operation-bar"
+                    style="gap: 10px">
+                    <button class="" id="clear-signature">清除</button>
+                    <button class="" id="save-signature">新增<span class="material-symbols-outlined">
+                      arrow_circle_right
+                      </span></button>
+                  </div>
+        </div>
+    </div>
 <!-- 簽名畫布開始 -->
-
 <div class="put-sign">
 
   <div class="nav">
@@ -231,7 +229,7 @@
       <canvas id="pdf-edit" style="border-radius: 10pt;  "></canvas>
   
       <p>選擇簽名</p>
-      <img class="sign" style="border: 1px solid #000" width="250" height="150" />
+      <img class="show-img sign" style="border: 1px solid #000" width="250" height="150" />
       <img class="add" src="" alt="">
   
       <button class="download">download PDF</button>
@@ -260,6 +258,5 @@
 <script src="./js/pdf-preview.js"></script>
 <script src="./js/pdf-viewer.js"></script>
 <script src="./js/canvas.js"></script>
-<script src="./js/putsign.js"></script>
 
 </html>
