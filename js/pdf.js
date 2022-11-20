@@ -102,10 +102,6 @@ sign.addEventListener("click", () => {
   });
 });
 
-
-
-
-
 // 簽名頁的預覽１
 const canvasp2 = new fabric.Canvas("pdf-preview");
 
@@ -136,4 +132,16 @@ document.querySelector("input").addEventListener("change", async (e) => {
 
   // 將 PDF 畫面設定為背景
   canvasp3.setBackgroundImage(pdfImage, canvasp3.renderAll.bind(canvasp3));
+});
+
+
+// 下載PDF
+const pdff = new jsPDF();
+const download = document.querySelector("#download");
+download.addEventListener("click", () => {
+  const image = canvasp3.toDataURL("image/png");
+  const width = pdff.internal.pageSize.width;
+  const height = pdff.internal.pageSize.height;
+  pdff.addImage(image, "png", 0, 0, width, height);
+  pdff.save("download.pdf");
 });
