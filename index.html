@@ -104,7 +104,7 @@
         </ul>
         <ul>
           <li><img src="/img/qamark.png"></li>
-          <li><button>退出</button></li>
+          <li><button class="leave-btn">退出</button></li>
         </ul>
     </div>
   <div class="bg"></div>
@@ -157,7 +157,7 @@
         </ul>
         <ul>
           <li><img src="/img/qamark.png"></li>
-          <li><button>退出</button></li>
+          <li><button class="leave-btn">退出</button></li>
         </ul>
     </div>
     <div class="main">
@@ -225,7 +225,7 @@
       </ul>
       <ul>
         <li><img src="/img/qamark.png"></li>
-        <li><button>退出</button></li>
+        <li><button class="leave-btn">退出</button></li>
       </ul>
   </div>
   <div class="nav closeshow">
@@ -250,22 +250,19 @@
     </ul>
     <ul>
       <div><img src="/img/qamark.png"></div>
-      <div><button>退出</button></div>
+      <div><button class="leave-btn">退出</button></div>
     </ul>
 </div>
 
-  <div class="main ">
+  <div class="main Complet">
       <canvas class="put" id="pdf-edit" style="border-radius: 10pt;  "></canvas>
 
-      <div class="filecontrol closeshow">
+      <div class="filecontrol-Complet closeshow">
         <div class="selectintro">
           <h2>已成功完成簽署</h2>
           <p>請盡快下載簽署完的檔案，關閉此網頁後檔案將不會保留。</p>
       </div>
       <div class="preview">
-        <div class="filepreview2">
-            <img src="">
-        </div>
         <div class="name-edit">
           <input id="file-rename" type="text" placeholder="喵喵企業契約書DOTs">
           <span class="material-symbols-outlined">edit</span>
@@ -277,15 +274,15 @@
       </div>
     </div>
     <div class="choose put closeend">
-      <p>選擇簽名</p>
-      <img class="show-img sign" style="border: 1px solid #000" width="250" height="150" />
+      <p>點擊簽名新增至文件</p>
+      <img class="show-img sign" style="border:3px dashed #FF9F46";  width="200" height="120" />
       <img class="add" src="" alt="">
     </div>
       
 
       <div class="step-operation-bar closeend put"style="gap: 10px">
         <img class="show-img" src="image/png" alt="">
-        <button class="" id="clear-signature">清除</button>
+        <button class="" id="back-signature">回上一頁,重新簽名</button>
         <button class="" id="next-page">
           下一步<span class="material-symbols-outlined">arrow_circle_right</span>
         </button>
@@ -319,7 +316,7 @@
       </ul>
       <ul>
         <div><img src="/img/qamark.png"></div>
-        <div><button>退出</button></div>
+        <div><button class="leave-btn">退出</button></div>
       </ul>
   </div>
   <div class="main">
@@ -333,7 +330,7 @@
             <img src="">
         </div>
         <div class="name-edit">
-          <input id="file-rename" type="text" placeholder="喵喵企業契約書DOTs">
+          <input id="file-rename" type="text" placeholder="ddsign">
           <span class="material-symbols-outlined">edit</span>
         </div>
       </div>
@@ -356,6 +353,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="./js/pdf-preview.js"></script>
 <script src="./js/pdf-viewer.js"></script>
 <script src="./js/canvas.js"></script>

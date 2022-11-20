@@ -62,6 +62,14 @@ function reset() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+$("#back-signature").click(function(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  $("#index").hide(); 
+  $("#file-preview").hide(); 
+  $("#func-sign").show(); 
+  $("#put-sign").hide(); 
+});
+
 // 儲存圖片
 function saveImage() {
   const newImg = canvas.toDataURL("image/png");

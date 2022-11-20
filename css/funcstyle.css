@@ -232,3 +232,20 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }/*# sourceMappingURL=funcstyle.css.map */
+.Complet{
+  display: flex;
+  flex-direction: row;
+}
+
+.selectintro{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.selectintro h2{
+  font-weight: 500;
+}
+.selectintro p{
+  width: 80%;
+  margin: auto;
+}

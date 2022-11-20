@@ -303,3 +303,85 @@ a{
 #next-page span{
     margin-left: 10pt;
 } 
+.tool-bar{
+    opacity: 50%;
+}
+.choose{
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 12.2003px 0.580966px rgba(0, 0, 0, 0.25);
+    border-radius: 9.29545px;
+    padding: 15pt 15pt 15pt 5vw;
+    display: flex;
+    position: fixed;
+    left: -5vw;
+    bottom: 50pt;
+    flex-direction: column;
+}
+.show-img{
+    border-radius:17px
+}
+.choose p{
+    margin-bottom:10pt;
+}
+.Complet{
+    display: flex;
+    flex-direction: row;
+}
+
+.filecontrol-Complet{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    border-radius: 14px;
+    height: 45em;
+    width: 40%;
+}
+
+.filecontrol-Complet .button{
+    display: flex;
+    flex-direction: column;
+}
+
+.preview{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+    .preview .name-edit{
+        margin-top: 30pt;
+        display: flex;
+        align-items: center;
+        background-color: #efefef;
+        padding: 5pt 15pt;
+        border-radius: 5pt;
+    }
+    .preview input{
+            background-color: #eaeaea;
+        }
+
+        #file-rename{
+            height: 30pt;
+            width: 100%;
+            border: none;
+            font-size: 12pt;
+        }
+.button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    cursor: pointer;
+}
+.button .download{
+    padding: 10pt;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    background-color: #FF9F46;
+    border-radius: 8pt;
+    color: white;
+    margin-bottom: 10pt;
+}
