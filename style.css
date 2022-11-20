@@ -246,11 +246,13 @@ a{
 }
 .canvas-container{
     margin-right: 10pt;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    right: 0;
+}
+#pdf-edit{
+    margin-right: 10pt;
+    position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%)
 }
 
 .filepreview{

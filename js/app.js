@@ -32,13 +32,23 @@ $("#save-signature").click(function(){
 $("#save-signature").click(function(){
   $(".put").show(); 
   $(".closeshow").hide(); 
-  $(".canvas-container").css("left","10vw"); 
+  $("#pdf-edit").css("top","50%"); 
+  $("#pdf-edit").css("left","50%"); 
+  
 });
 
 $("#next-page").click(function(){
   $(".closeend").hide(); 
   $(".closeshow").show(); 
-  $(".canvas-container").css("left","0"); 
+  $("#pdf-edit").css("top","50%"); 
+  $("#pdf-edit").css("left","50%"); 
+});
+
+$("#back-put").click(function(){
+  $(".closeend").show(); 
+  $(".closeshow").hide(); 
+  $("#pdf-edit").css("top","50%"); 
+  $("#pdf-edit").css("left","50%"); 
 });
 
 //leave-btn兩段式退出
