@@ -9,7 +9,7 @@ console.log(showImage);
 let isPainting = false;
 
 // 設定線條的相關數值
-ctx.lineWidth = 50;
+ctx.lineWidth = 100;
 ctx.lineCap = "round";
 
 canvas.width = document.querySelector("#manage-signature-content").offsetWidth;

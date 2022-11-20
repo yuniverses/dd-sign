@@ -98,9 +98,10 @@ sign.addEventListener("click", () => {
     image.top = 400;
     image.scaleX = 0.5;
     image.scaleY = 0.5;
-    canvas.add(image);
+    canvasp3.add(image);
   });
 });
+
 
 
 
