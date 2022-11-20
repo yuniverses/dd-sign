@@ -139,5 +139,5 @@ download.addEventListener("click", () => {
   const width = pdff.internal.pageSize.width;
   const height = pdff.internal.pageSize.height;
   pdff.addImage(image, "png", 0, 0, width, height);
-  pdff.save($(" #file-rename ").val()+".pdf");
+  pdff.save($("#file-rename").val()+".pdf");
 });
