@@ -7,6 +7,7 @@
 }
 
 body{
+    overflow-x:hidden;
     font-family: 'Noto Sans TC', sans-serif;
     color: #3f3f3f;
     backdrop-filter: blur(5px);
@@ -21,9 +22,21 @@ body{
     text-decoration: underline;
 }
 
+.btn{
+    padding: 15pt;
+    align-items: center;
+    text-align: center;
+    background-color: #FF9F46;
+    border-radius: 8pt;
+    color: white;
+    margin-bottom: 10pt;
+    width: 100%;
+}
+
 .index{
     margin: auto;
-    width: 65%;
+    width: 90%;
+    max-width: 900pt;
 }
 
 a{
@@ -31,7 +44,7 @@ a{
     color: rgb(26, 26, 26);
 }
 
-.nav{
+.nav-index{
     display: flex;
     justify-content: space-between;
     margin: 14vh 0 3vh 0;
@@ -62,6 +75,7 @@ a{
 /* introbox done*/
 
 /* mainfunc start*/
+
 
 .mainfunc{
     display: flex;
@@ -203,12 +217,35 @@ a{
 
 
 /* filepreview start */
+.bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    right: 0;
+    width: 1000vw;
+    height: 1000vh;
+    z-index: -999;
+    background-color: #747474;
+}
+
 
 .file{
-    margin: 14vh auto 10vh auto;
-    width: 65%;
     display: flex;
     justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+}
+.file-box{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: flex-end;
+    justify-content: center;
+}
+.canvas-container{
+    margin-right: 10pt;
 }
 
 .filepreview{
@@ -227,12 +264,13 @@ a{
 .filecontrol{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center; 
-    background-color: #E3E3E3;
+    background-color: #F5F5F5;
     border-radius: 14px;
-    height: 45em;
-    width: 40%;
+    height: 100%;
+    width: 200pt;
+    padding: 50pt;
 }
 
 .selectintro{

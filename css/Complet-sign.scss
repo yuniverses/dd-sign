@@ -1,0 +1,147 @@
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 100vh;
+    background: #ece9e4;
+    backdrop-filter: blur(5px);
+    margin: auto;
+    width: 90%;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(26, 26, 26);
+}
+
+.nav{
+    display: flex;
+    vertical-align: middle;
+    padding: 50px 0;
+    justify-content: space-between;
+    .progress-bar{
+        li{
+            margin: 0 2vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                font-size: 10pt;
+                color: rgba(204, 204, 204, 0.8);
+            }
+        }
+        .finished{
+            div{
+                background-color: #FF9F46;
+            }
+            p{
+                color: #FF9F46;
+            }
+        }
+        div{
+            width: 20pt;
+            height: 20pt;
+            border-radius: 20pt;
+            background-color: rgba(204, 204, 204, 0.8);
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: end;
+        flex-direction: row;
+        button{
+            margin-left: 2vw;
+            border: none;
+            padding: 10pt 60pt;
+            border-radius: 7pt;
+            background-color: #454545;
+            color: white;
+            cursor: pointer;
+        }
+    }
+} 
+
+.main{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 750pt;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sign-preview{
+    height: 45em;
+    width: 35em;
+    background-color: #3f3f3f;
+}
+
+.filecontrol{
+    .selectintro{
+        text-align: center;
+        h2{
+            font-weight: 500;
+        }
+        p{
+            width: 80%;
+            margin: auto;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    background-color: #F5F5F5;
+    border-radius: 14px;
+    height: 45em;
+    width: 40%;
+    .preview{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        align-items: center;
+        .name-edit{
+            margin-top: 30pt;
+            display: flex;
+            align-items: center;
+            background-color: #efefef;
+            padding: 5pt 15pt;
+            border-radius: 5pt;
+            input{
+                background-color: #efefef;
+            }
+        }
+        .filepreview2{
+            width: 120pt;
+            height: 160pt;
+            border-radius: 12px;
+            background-color: #3f3f3f;
+        }
+        #file-rename{
+            height: 30pt;
+            width: 100%;
+            border: none;
+            font-size: 12pt;
+        }
+    }
+    .button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        .download{
+            padding: 10pt;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            background-color: #FF9F46;
+            border-radius: 8pt;
+            color: white;
+            margin-bottom: 10pt;
+        }
+    }
+}
+.filepreview{
+    width: 35em;
+    background-color: #3f3f3f;
+}
+

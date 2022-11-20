@@ -135,3 +135,5 @@ manageSignatureBtn.addEventListener("click", () => {
   canvas.height = document.querySelector("#steps-uid-0-p-1").offsetWidth / 4;
   signatureImg();
 });
+
+

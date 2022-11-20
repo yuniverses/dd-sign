@@ -7,14 +7,16 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="style.css" rel="stylesheet">
+    <link href="./css/funcstyle.css" rel="stylesheet">
 </head>
 <body>
 <!-- 主頁開始 -->
-<div class="index">
+<div class="index" id="index" >
     <!-- 主頁工具列開始 -->
-    <div class="nav">
+    <div class="nav-index">
         <a href="#"><img src="/img/logo.png"></a>
         <ul><li><img src="/img/qamark.png"></li></ul>
     </div>
@@ -29,7 +31,7 @@
             <img src="/img/img1.png">
         </div>
         <div class="mainfunc">
-            <div id="background-y"></div>
+            <!-- <div id="background-y"></div> -->
             
             <!-- <label>
                 <input type="file" class="filein">
@@ -41,11 +43,12 @@
             </label> -->
             
             <div>
-                <input type="file" id="fileUploader" class="fileUploader" accept="pdf" name="file"/>
+                <input type="file" id="fileUploader" class="fileUploader" accept="pdf" name="file" />
                 <div id="upload_zone" class="upload_zone">
                         
                     <img src="/img/upload.png">
                     <p>上傳文件以開始簽署<br>拖曳檔案或點擊此處上傳</p>
+                    <p>上傳進度： {{progress}}</p>
                     <img src="/img/picture_as_pdf.png">
                 </div>
             </div>
@@ -77,12 +80,39 @@
 <!-- 主頁結束 -->
 
 <!-- 檔案使用預覽開始 -->
-<div class="file">
-
-    <canvas id="canvas" style="border: 1px solid #000"></canvas>
+<div class="file" id="file-preview" >
+    <div class="nav">
+        <a class="logo" href="#"><img src="/img/logo.png"></a>
+        <ul class="progress-bar">
+          <li class="finished">
+            <div></div>
+            <p>確認文件</p>
+          </li>
+          <li class="finished">
+            <div></div>
+            <p>簽署</p>
+          </li>
+          <li class="">
+            <div></div>
+            <p>放置簽名</p>
+          </li>
+          <li class="">
+            <div></div>
+            <p>輸出/寄送</p>
+          </li>
+        </ul>
+        <ul>
+          <li><img src="/img/qamark.png"></li>
+          <li><button>退出</button></li>
+        </ul>
+    </div>
+  <div class="bg"></div>
+    <!------------------修改此canvas的css---------->
+    <div class="file-box">
+        <canvas id="canvas-preview" style="border-radius: 10pt;  "></canvas>
 
     <div class="filecontrol">
-        <div class="filepreview2">
+        <!-- <div class="filepreview2">
             <img src="">
         </div>
         <div class="selectintro">
@@ -92,19 +122,96 @@
         <div class="select">
             <img src="/img/funct1.png">
             <img src="/img/funct2.png">
-        </div>
-        <img src="/img/start.png">
+        </div> -->
+        <a class="start-btn btn" href="#" onclick="tofuncsign()">開始</a>
         <label>
             <input type="file"><p>重新上傳文件</p>
         </label>
     </div>
+    </div>
 </div>
 <!-- 檔案使用預覽結束 -->
+
+<!-- 簽名畫布開始 -->
+<div id="func-sign">
+    <div class="nav">
+        <a class="logo" href="#"><img src="/img/logo.png"></a>
+        <ul class="progress-bar">
+          <li class="finished">
+            <div></div>
+            <p>確認文件</p>
+          </li>
+          <li class="finished">
+            <div></div>
+            <p>簽署</p>
+          </li>
+          <li class="">
+            <div></div>
+            <p>放置簽名</p>
+          </li>
+          <li class="">
+            <div></div>
+            <p>輸出/寄送</p>
+          </li>
+        </ul>
+        <ul>
+          <li><img src="/img/qamark.png"></li>
+          <li><button>退出</button></li>
+        </ul>
+    </div>
+    <div class="main">
+      <div class="pdf-preview-box">
+        <button id="pdf-show-btn"><span class="material-symbols-outlined">arrow_circle_right</span>查看文件</button>
+        <div class="pdf-preview" ><canvas id="pdf-preview" style="border: 0px solid #000"></canvas></div>
+      </div>
+    
+            <!-- Manage Sign -->
+            <div class="tab-pane" id="manage-signature-content" aria-labelledby="manage-signature">
+                <div class="row m-0">
+                  <div id="background-y"></div>
+                  <div class="sign-area">
+                    <canvas id="canvas-signature"></canvas>
+                  </div>
+                </div>
+              </div>
+            <div class="tool-bar">
+              <div class="uploadsign"><button>上傳簽名</button></div>
+              <div class="tool">
+                <div class="pen">
+                  <div class="selected"><span class="material-symbols-outlined">draw</span></div>
+                  <div><span class="material-symbols-outlined">deblur</span></div>
+                </div>
+                <div class="steps">
+                  <span class="material-symbols-outlined">reply</span>
+                  <span class="material-symbols-outlined">forward</span>
+                </div>
+    
+              </div>
+            </div>
+              <div class="step-operation-bar"
+                    style="gap: 10px">
+                    <button class="" id="clear-signature">清除</button>
+                    <button class="" id="save-signature">新增<span class="material-symbols-outlined">
+                      arrow_circle_right
+                      </span></button>
+                  </div>
+        </div>
+    </div>
+<!-- 簽名畫布開始 -->
+
+
 </body>
 <script src="./js/fileinput.js"></script>
-<script src="./app.js"></script>
+<script src="./js/app.js"></script>
 <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
 <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
 <script src="./js/pdf.js"></script>
 <script src="./js/dropzone.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./js/pdf-preview.js"></script>
+<script src="./js/pdf-viewer.js"></script>
+<script src="./js/canvas.js"></script>
+
 </html>

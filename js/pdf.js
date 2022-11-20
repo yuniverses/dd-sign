@@ -16,6 +16,13 @@ function readBlob(blob) {
     reader.addEventListener("load", () => resolve(reader.result));
     reader.addEventListener("error", reject);
     reader.readAsDataURL(blob);
+    //上傳後從首頁切換到確認頁面
+    var x = document.getElementById("index");
+        x.style.display = "none";
+        var x = document.getElementById("file-preview");
+        x.style.display = "flex";
+        var x = document.getElementById("func-sign");
+        x.style.display = "none";
   });
 }
 
@@ -63,17 +70,33 @@ async function pdfToImage(pdfData) {
 }
 
 // 此處 canvas 套用 fabric.js
-const canvas = new fabric.Canvas("canvas");
+const canvasp = new fabric.Canvas("canvas-preview");
 
 document.querySelector("input").addEventListener("change", async (e) => {
-  canvas.requestRenderAll();
+  canvasp.requestRenderAll();
   const pdfData = await printPDF(e.target.files[0]);
   const pdfImage = await pdfToImage(pdfData);
 
   // 透過比例設定 canvas 尺寸
-  canvas.setWidth(pdfImage.width / window.devicePixelRatio);
-  canvas.setHeight(pdfImage.height / window.devicePixelRatio);
+  canvasp.setWidth(pdfImage.width / window.devicePixelRatio);
+  canvasp.setHeight(pdfImage.height / window.devicePixelRatio);
 
   // 將 PDF 畫面設定為背景
-  canvas.setBackgroundImage(pdfImage, canvas.renderAll.bind(canvas));
+  canvasp.setBackgroundImage(pdfImage, canvasp.renderAll.bind(canvasp));
+});
+
+// 簽名頁的預覽１
+const canvasp2 = new fabric.Canvas("pdf-preview");
+
+document.querySelector("input").addEventListener("change", async (e) => {
+  canvasp2.requestRenderAll();
+  const pdfData = await printPDF(e.target.files[0]);
+  const pdfImage = await pdfToImage(pdfData);
+
+  // 透過比例設定 canvas 尺寸
+  canvasp2.setWidth(pdfImage.width / window.devicePixelRatio);
+  canvasp2.setHeight(pdfImage.height / window.devicePixelRatio);
+
+  // 將 PDF 畫面設定為背景
+  canvasp2.setBackgroundImage(pdfImage, canvasp2.renderAll.bind(canvasp2));
 });
