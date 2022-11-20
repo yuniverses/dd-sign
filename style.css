@@ -290,3 +290,16 @@ a{
 }
 
 /* filepreview done */
+#next-page{
+    display: flex;
+        padding: 15pt 60pt;
+        border: none;
+        border-radius: 7pt 0 0 7pt;
+        background: #FF9F46;
+        color: #F9F6F1;
+        align-items: center;
+        cursor: pointer;
+}    
+#next-page span{
+    margin-left: 10pt;
+} 

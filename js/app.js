@@ -3,14 +3,8 @@
   $("#file-preview").hide(); 
   $("#func-sign").hide(); 
   $("#put-sign").hide(); 
-// (function() {
-//     var x = document.getElementById("index");
-//     x.style.display = "";
-//     var x = document.getElementById("file-preview");
-//     x.style.display = "none";
-//     var x = document.getElementById("func-sign");
-//     x.style.display = "none";
-// })()
+  $("#Complet-sign").hide(); 
+
   
 //上傳後從首頁切換到確認頁面（代碼在pdf.js）
 $("#save-signature").click(function(){
@@ -29,3 +23,13 @@ $("#save-signature").click(function(){
     var x = document.getElementById("func-sign");
     x.style.display = "block";
 }
+
+$("#save-signature").click(function(){
+  $(".put").show(); 
+  $(".closeshow").hide(); 
+});
+
+$("#next-page").click(function(){
+  $(".closeend").hide(); 
+  $(".closeshow").show(); 
+});
