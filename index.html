@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="./css/Complet-sign.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="./css/funcstyle.css" rel="stylesheet">
 </head>
@@ -198,6 +199,8 @@
         </div>
     </div>
 <!-- 簽名畫布開始 -->
+
+<!-- 簽名編輯開始 -->
 <div class="put-sign" id="put-sign">
 
   <div class="nav">
@@ -232,8 +235,6 @@
       <img class="show-img sign" style="border: 1px solid #000" width="250" height="150" />
       <img class="add" src="" alt="">
   
-      <button id="download">download PDF</button>
-  
       <div class="step-operation-bar"
                       style="gap: 10px">
                       <img class="show-img" src="image/png" alt="">
@@ -244,6 +245,63 @@
     </div>
   </div>
 </div>
+<!-- 簽名編輯結束 -->
+
+<!-- 完成頁面開始 -->
+<div class="Complet-sign">
+
+  <div class="nav">
+      <a class="logo" href="#"><img src="/img/logo.png"></a>
+      <ul class="progress-bar">
+        <li class="finished">
+          <div></div>
+          <p>確認文件</p>
+        </li>
+        <li class="finished">
+          <div></div>
+          <p>簽署</p>
+        </li>
+        <li class="finished">
+          <div></div>
+          <p>放置簽名</p>
+        </li>
+        <li class="finished">
+          <div></div>
+          <p>輸出/寄送</p>
+        </li>
+      </ul>
+      <ul>
+        <div><img src="/img/qamark.png"></div>
+        <div><button>退出</button></div>
+      </ul>
+  </div>
+  <div class="main">
+      <div class="sign-preview">
+        <label>
+        </label>
+      </div>
+      <div class="filecontrol">
+        <div class="selectintro">
+          <h2>已成功完成簽署</h2>
+          <p>請盡快下載簽署完的檔案，關閉此網頁後檔案將不會保留。</p>
+      </div>
+      <div class="preview">
+        <div class="filepreview2">
+            <img src="">
+        </div>
+        <div class="name-edit">
+          <input id="file-rename" type="text" placeholder="喵喵企業契約書DOTs">
+          <span class="material-symbols-outlined">edit</span>
+        </div>
+      </div>
+      <div class="button">
+        <button class="download" id="download" href="#"><span class="material-symbols-outlined">picture_as_pdf</span>下載為PDF</button>
+        <a href="#">回首頁</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 完成頁面結束 -->
 
 </body>
 <script src="./js/fileinput.js"></script>
